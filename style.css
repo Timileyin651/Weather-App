@@ -199,6 +199,7 @@ body {
 
 .sign{
   animation: logoBounce 2s infinite;
+  text-align: center;
 }
 
 .error{
