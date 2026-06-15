@@ -1,4 +1,4 @@
-## First Semester Porject: Weather-App
+## First Semester Project: Weather-App
 ### NAME: Victor Otunuga Timileyin
 ### STUDENT ID: ALT/SOE/BAR/026/0009
 
