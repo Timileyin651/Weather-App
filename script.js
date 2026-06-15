@@ -37,7 +37,7 @@ navigator.geolocation.getCurrentPosition(async function (position) {
         locName.innerHTML = `
         <strong>${country}</strong>`;
       }
-      console.log(city);
+      // console.log(city);
 
       getWeather(lat, lon);
     }
@@ -176,7 +176,7 @@ function displayForecastDaily(data) {
     };
   });
 
-  console.log(combinedData);
+  // console.log(combinedData);
   forecast.innerHTML = ``;
   for (cdata of combinedData) {
     const weatherValue = getWeatherDescription(cdata);
