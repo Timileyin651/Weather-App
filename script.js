@@ -83,7 +83,7 @@ async function getCoordinates(city) {
 
     if (response.ok) {
       const data = await response.json();
-      console.log(data);
+      // console.log(data);
       locName.innerHTML = `
         <strong>${data.results[0].name}, ${data.results[0].country}</strong>
       `;
@@ -112,7 +112,7 @@ ax,temperature_2m_min,weather_code&timezone=auto`;
     const response = await fetch(url);
     if (response.ok) {
       const data = await response.json();
-      console.log(data);
+      // console.log(data);
       const weatherValue = getWeatherDescription(data.current);
       const weatherHumidity = data.current.relative_humidity_2m;
       const weatherTemp = data.current.temperature_2m;
@@ -230,6 +230,7 @@ function getWeatherDescription(cdata) {
       return ["Rain showers", "🌧️"];
 
     case 95:
+    case 96:
       return ["Thunderstorm", "⛈"];
 
     default:
