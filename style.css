@@ -1,0 +1,243 @@
+:root {
+  --custom1: #1a3c5e;
+  --custom2: #2e86ab;
+  --custom3: white;
+  --custom4: rgb(223, 210, 210, 0.9);
+  --custom5: rgb(186, 173, 173);
+  --custom6: rgba(46, 134, 171, 0.02);
+  --custom7: rgb(46, 134, 171, 0.5);
+  --accent1: #e8ff47;
+  --accent2: rgb(147, 147, 216);
+  --accent3: #ff4747;
+}
+
+body {
+  margin: 0px 0px;
+  box-sizing: border-box;
+  padding: 0px 0px;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  /* background: gray; */
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#para {
+  color: var(--custom5);
+}
+
+#humid,
+#wind,
+#uv {
+  color: var(--custom1);
+}
+
+#content {
+  width: 23%;
+  padding: 10px;
+  background: rgb(249, 248, 248);
+  border-radius: 10px;
+}
+
+.topBar {
+  background: var(--custom1);
+  color: var(--custom3);
+  border-radius: 10px 10px 0 0;
+  display: flex;
+  margin-bottom: 4px;
+  gap: 2px;
+}
+
+#showData{
+  padding-left:5px;
+  display: flex;
+  gap: 2px;
+}
+.chip{
+  border: 1px solid var(--custom1);
+  background: var(--custom1);
+  color: var(--custom3);
+  width: 50px;
+  padding: 3px;
+  border-radius: 10px;
+  margin: 5px 0;
+  font-size: 10px;
+  text-align: center;
+}
+
+.chip:hover{
+  /* transform: translateY(0.2px); */
+  background: var(--custom2);
+  border: 1px solid var(--custom2)
+}
+
+.weatherSearch {
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+  padding-left: 5px;
+  margin-bottom: 4px;
+}
+
+
+.weatherSearch button {
+  padding: 8px;
+  background: var(--custom2);
+  color: var(--custom3);
+  border-radius: 6px;
+  border: none;
+}
+
+.weatherSearch button:hover {
+  background: var(--custom1);
+  transition: all 0.2 ease;
+  cursor: pointer;
+}
+
+.weatherSearch input {
+  outline: none;
+  border-radius: 6px;
+  padding: 5px;
+  flex: 1;
+}
+
+#heroSection {
+  background: var(--custom2);
+  color: var(--custom3);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 4px;
+  padding: 10px 0;
+  height: 150px;
+}
+
+#heroSection p {
+  margin: 5px 0;
+  padding: 2px 0;
+}
+
+#degree {
+  font-size: x-large;
+}
+#desc {
+  color: var(--custom4);
+  display: flex;
+  gap: 5px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.Statsrow {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--custom2);
+  text-align: center;
+  padding: 10 px 10px;
+  border-radius: 10px;
+  justify-content: space-around;
+  height: 40px;
+  padding: 10px 0;
+}
+
+#bod {
+  border: 1px solid var(--custom7);
+  height: 40px;
+}
+
+#rw1,
+#rw2,
+#rw3 {
+  margin: 8px 0;
+}
+
+#forecast {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#forecast p {
+  font-weight: bolder;
+}
+
+.fcard{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid var(--custom2);
+  border-radius: 10px;
+  color: var(--custom1);
+  background: var(--custom6);
+  padding: 10px 20px;
+  height: 50px;
+}
+
+/* animated loader */
+.loader{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 60px;
+}
+
+.loader span{
+  width: 10px;
+  height: 10px;
+  background: var(--accent1);
+  border-radius: 50%;
+  display: block;
+  animation: bounce 0.6s ease-in-out infinite alternate;
+}
+
+.sign{
+  animation: logoBounce 2s infinite;
+}
+
+.error{
+  font-style: italic;
+  font-size: 10px;
+}
+
+
+
+.loader span:nth-child(2) {animation-delay: 0.15s; background: var(--accent2);}
+.loader span:nth-child(3) {animation-delay: 0.30s; background: var(--accent3);}
+
+
+@keyframes logoBounce{
+  0%,100%{
+    transform: translateY(0);
+  }
+  50%{
+    transform: translateY(-5px);
+  }
+}
+@keyframes bounce {
+  from { transform: translateY(0); opacity: 1;}
+  to { transform: translateY(-20px); opacity: 0.4;}
+  
+}
+
+@media (max-width: 480px) {
+  #content {
+    width: 100%;
+    padding: 20px;
+  }
+}
+
+@media  (max-width: 1000px) {
+  #content {
+    width: auto;
+    padding: 10px;
+  }
+}
+
+

@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div id="content">
+        <!-- Top navigation var -->
+        <header>
+          <div class="topBar">
+            <p>☀</p>
+            <p>Weather App</p>
+          </div>
+        </header>
+        <main>
+          <section class="weatherSearch">
+            <input type="text" placeholder="Enter a city" id="querySearch" />
+            <button id="searchBtn">Search</button>
+          </section>
+          <section id="showData">
+            <!-- <div class="chip" data-brand="Dugbe">Dugbe</div> -->
+          </section>
+          <section id="heroSection">
+            <!-- Hero section -->
+            <p id="sign">N/A</p>
+            <p id="location"><strong>N/A</strong></p>
+            <p id="degree">N/A</p>
+            <div id="desc">
+              <p id="comment1">N/A</p>
+              <p>.</p>
+              <p id="comment2">n/a</p>
+            </div>
+          </section>
+          <section class="Statsrow">
+            <!-- Stats row -->
+            <div id="rw1">
+              <p id="para">Humidity</p>
+              <p id="humid">n/a</p>
+            </div>
+            <div id="bod"></div>
+            <div id="rw2">
+              <p id="para">Wind</p>
+              <p id="wind">n/a</p>
+            </div>
+            <p id="bod"></p>
+            <div id="rw3">
+              <p id="para">UV Index</p>
+              <p id="uv">n/a</p>
+            </div>
+          </section>
+
+          <section>
+            <!-- Forecast section -->
+            <p id="para">5-DAY FORECAST</p>
+            <div id="forecast">
+              <div class="fcard">
+                <p>N/A</p>
+                <p>n/a</p>
+                <div>
+                  <p>n/a</p>
+                  <p id="para">n/a</p>
+                </div>
+              </div>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <script src="/script.js"></script>
+  </body>
+</html>
